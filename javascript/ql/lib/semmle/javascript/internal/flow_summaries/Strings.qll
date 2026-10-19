@@ -58,7 +58,7 @@ class StringSplit extends SummarizedCallable::Range {
 
   override DataFlow::MethodCallNode getACallSimple() {
     result.getMethodName() = "split" and
-    result.getNumArgument() = [1, 2] and
+    result.getNumArgument() = [0, 1, 2] and
     not result.getArgument(0).getStringValue() = ["#", "?"]
   }
 
